@@ -1,0 +1,252 @@
+:root {
+    --clr-primary-500: hsl(25, 97%, 53%);
+
+    --clr-neutral-900: hsl(216, 12%, 8%);
+    --clr-neutral-700: hsl(214, 19%, 26%);
+    --clr-neutral-400: hsl(216, 12%, 54%);
+    --clr-neutral-200: hsl(217, 12%, 63%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-gradient: linear-gradient(to bottom, hsl(215, 20%, 17%), hsl(215, 24%, 12%));
+
+    --ff-base: 'Overpass', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+*/
+/* html,
+body {
+    height: 100%;
+} */
+
+/*
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+}
+
+/* 
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    background-color: var(--clr-neutral-900);
+    display: grid;
+    place-content: center;
+    color: var(--clr-neutral-100);
+    font-family: var(--ff-base);
+    min-block-size: 100vh;
+}
+
+.feedback {
+    background-image: var(--clr-gradient);
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 1rem;
+}
+
+
+.success {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.feedback__options {
+    display: flex; 
+    gap: 1rem;
+    justify-content: center;
+    
+}
+/* 
+.feedback__options li {
+    border-radius: 50%;
+    width: 2rem;
+    background-color: var(--clr-neutral-400);
+    text-align: center;
+    justify-self: center;
+} */
+
+form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.feedback__title {
+    font-size: 2rem;
+}
+
+.feedback__description {
+    color: var(--clr-neutral-400);
+}
+
+.star-icon {
+    --size: 48px;
+
+
+    background-color: var(--clr-neutral-700);
+    width: var(--size);
+    height: var(--size);
+    display: grid;
+    border-radius: var(--size);
+    margin-bottom: 1.875rem;
+
+}
+
+.star {
+    justify-self: center;
+    align-self: center;
+
+}
+
+.button {
+    --size: 45px;
+
+    background-color: var(--clr-primary-500);
+    border: none;
+    border-radius: var(--size);
+    min-height: var(--size);
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance: none;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    text-align: center;
+    transition: background-color 0.15s linear, color 0.15s linear;
+}
+
+.button:is(:hover, :focus-visible) {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary-500);
+    outline: none;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.radio-input .control {
+    --size: 51px;
+
+    display: block;
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-400);
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    line-height: var(--size);
+    text-align: center;
+    transition: background-color .15s linear, color .15s linear;
+}
+
+.radio-input input:checked + .control {
+    background-color: var(--clr-neutral-400);
+    color: white;
+}
+
+.radio-input:hover .control,
+.radio-input input:focus + .control {
+    background-color: var(--clr-primary-500);
+    color: white;
+}
+
+
+.grid-container {
+    display: grid;
+    gap: .5rem;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+}
+
+.graphic {
+    margin: auto;
+}
+
+.success__result {
+    color: var(--clr-primary-500);
+    background-color: var(--clr-neutral-700);
+    margin: auto;
+    margin-block: 18px;
+    width: 50%;
+    border-radius: 2rem;
+}
+
+.success__description {
+    color: var(--clr-neutral-400);
+}
+
+.close-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    text-align: right;
+    color: var(--clr-neutral-400);
+}
+
+.close-btn:hover {
+    color: var(--clr-primary-500);
+}
