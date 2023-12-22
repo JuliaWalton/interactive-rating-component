@@ -82,6 +82,22 @@ h6 {
     overflow-wrap: break-word;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+
+
+
 body {
     background-color: var(--clr-neutral-900);
     display: grid;
@@ -91,6 +107,10 @@ body {
     min-block-size: 100vh;
 }
 
+.success {
+    display: none;
+}
+
 .feedback {
     background-image: var(--clr-gradient);
     max-width: 450px;
@@ -98,26 +118,11 @@ body {
     border-radius: 1rem;
 }
 
-
-.success {
-    /* visibility: hidden; */
-    display: none;
-}
-
 .feedback__options {
     display: flex; 
     gap: 1rem;
     justify-content: center;
-    
 }
-/* 
-.feedback__options li {
-    border-radius: 50%;
-    width: 2rem;
-    background-color: var(--clr-neutral-400);
-    text-align: center;
-    justify-self: center;
-} */
 
 form {
     margin-top: 1rem;
@@ -136,7 +141,6 @@ form {
 .star-icon {
     --size: 48px;
 
-
     background-color: var(--clr-neutral-700);
     width: var(--size);
     height: var(--size);
@@ -149,7 +153,6 @@ form {
 .star {
     justify-self: center;
     align-self: center;
-
 }
 
 .button {
@@ -173,19 +176,6 @@ form {
     background-color: var(--clr-neutral-100);
     color: var(--clr-primary-500);
     outline: none;
-}
-
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
 }
 
 .radio-input .control {
@@ -213,12 +203,9 @@ form {
     color: white;
 }
 
-
 .grid-container {
     display: grid;
     gap: .5rem;
-    /* justify-content: center;
-    align-items: center; */
     text-align: center;
 }
 

@@ -7,17 +7,7 @@ const closeBtn = document.querySelector('.close-btn');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const rating = new FormData(e.target).get("rate");
-    console.log(rating);
     if (rating) {
         wrapper.innerHTML = success.innerHTML.replace(/{{ XXX }}/, rating);
-    } else {
-        submitBtn.textContent = `Please submit a rating`;
-    }
-    // console.log(e.target);
+    } 
 });
-
-// closeBtn.addEventListener('click', () => {
-//     if (success.innerHTML = wrapper.innerHTML)
-//     console.log(idk);
-//     })
-
